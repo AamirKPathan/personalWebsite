@@ -24,6 +24,6 @@ Hosted on Github Pages
 - Update dates, links, and certifications as they change.
 - Let the writing sound like me, not a template.
 
-## Deployment Ideas
+## Deployment
 
-This site can be published with GitHub Pages, Netlify, Vercel, or any host that supports static HTML/CSS/JS.
+This site is published with GitHub Pages, Netlify, Vercel, or any host that supports static HTML/CSS/JS.
