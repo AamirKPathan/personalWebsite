@@ -14,7 +14,6 @@ The site is intentionally simple: HTML for the structure, CSS for the look and f
 ## How To View It
 
 Go To View Project On Stardance.
-Hosted on Github Pages
 
 ## Notes For Future Me
 
@@ -26,4 +25,4 @@ Hosted on Github Pages
 
 ## Deployment
 
-This site is published with GitHub Pages, Netlify, Vercel, or any host that supports static HTML/CSS/JS.
+This site is published with GitHub Pages.
