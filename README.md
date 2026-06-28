@@ -1,25 +1,27 @@
 # Aamir Khan Pathan Portfolio
 
-This is my personal portfolio site. It is a small, static website where I share the projects I have built, the experience I am gaining, and the ways people can get in touch with me.
+This is my personal portfolio site: a simple place to show what I am building, what I am learning, and how people can reach me.
 
-The site is intentionally simple: HTML for the structure, CSS for the look and feel, and a little JavaScript for navigation and the contact form behavior.
+The site is intentionally lightweight. It uses HTML for the content, CSS for the layout and personality, and a little JavaScript for navigation and the contact form.
 
 ## What's Inside
 
-- `index.html` - the page content, project cards, experience, certifications, and contact section
-- `styles.css` - the visual design, layout, responsive styles, and animations
-- `script.js` - smooth section navigation and form handling
-- `images/` - profile and project images used throughout the site
+- `index.html` - page content, projects, experience, certifications, and contact details
+- `styles.css` - colors, spacing, responsive layout, cards, and animation styles
+- `script.js` - section navigation and contact form behavior
+- `images/` - profile and project images used across the site
 
 ## How To View It
 
-Go To View Project On Stardance.
+View the project on Stardance, or open the GitHub Pages version once it is published.
+
+You can also open `index.html` directly in a browser to run the site locally.
 
 ## Notes For Future Me
 
-- Keep project descriptions short and specific.
+- Keep project descriptions short, specific, and honest.
 - Use real screenshots or product images when possible.
-- Check the site on a phone after changing layout styles.
+- Check the layout on a phone after changing styles.
 - Update dates, links, and certifications as they change.
 - Let the writing sound like me, not a template.
 

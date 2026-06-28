@@ -1,49 +1,48 @@
-/* ============================================
-   WARM GRADIENT ELEGANCE - PERSONAL PORTFOLIO
-   ============================================ */
 
-/* CSS Variables - Color Palette */
 :root {
-    --color-cream: #f7f3ed;
-    --color-terracotta: #c85a3a;
-    --color-gold: #d4a574;
-    --color-charcoal: #3d3d3d;
-    --color-beige: #ede9e3;
-    --color-light-gray: #f0ede8;
+    --color-paper: #fbfaf7;
+    --color-mist: #eef3ef;
+    --color-clay: #b95c43;
+    --color-honey: #caa86a;
+    --color-sage: #5f7c6f;
+    --color-ink: #2f3432;
+    --color-stone: #6c716e;
+    --color-line: #ded9cf;
+
     
-    /* Semantic Colors */
-    --bg-primary: var(--color-cream);
-    --bg-secondary: var(--color-beige);
-    --text-primary: var(--color-charcoal);
-    --text-secondary: #666;
-    --accent-primary: var(--color-terracotta);
-    --accent-secondary: var(--color-gold);
+    --bg-primary: var(--color-paper);
+    --bg-secondary: var(--color-mist);
+    --text-primary: var(--color-ink);
+    --text-secondary: var(--color-stone);
+    --accent-primary: var(--color-clay);
+    --accent-secondary: var(--color-sage);
+    --accent-warm: var(--color-honey);
+
     
-    /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
+
     
-    /* Typography */
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
+
     
-    /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --shadow-sm: 0 2px 10px rgba(47, 52, 50, 0.07);
+    --shadow-md: 0 8px 24px rgba(47, 52, 50, 0.1);
+    --shadow-lg: 0 18px 45px rgba(47, 52, 50, 0.14);
+
     
-    /* Transitions */
     --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
     --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* ============================================
-   RESET & BASE STYLES
-   ============================================ */
+
 
 * {
     margin: 0;
@@ -57,19 +56,20 @@ html {
 
 body {
     font-family: var(--font-body);
-    background-color: var(--bg-primary);
+    background:
+        linear-gradient(180deg, rgba(238, 243, 239, 0.65) 0%, rgba(251, 250, 247, 0) 34rem),
+        var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
 }
 
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: 700;
     line-height: 1.2;
+    letter-spacing: 0;
 }
 
 h1 {
@@ -89,9 +89,7 @@ p {
     color: var(--text-secondary);
 }
 
-/* ============================================
-   CONTAINER & LAYOUT
-   ============================================ */
+
 
 .container {
     max-width: 1200px;
@@ -105,9 +103,7 @@ p {
     }
 }
 
-/* ============================================
-   HEADER & NAVIGATION
-   ============================================ */
+
 
 .header {
     position: sticky;
@@ -140,6 +136,16 @@ p {
 
 .logo-link:hover {
     color: var(--accent-secondary);
+}
+
+.logo-link:focus-visible,
+.nav-link:focus-visible,
+.btn:focus-visible,
+.expand-btn:focus-visible,
+.close-btn:focus-visible,
+.info-text a:focus-visible {
+    outline: 3px solid rgba(95, 124, 111, 0.32);
+    outline-offset: 4px;
 }
 
 .nav-list {
@@ -184,9 +190,7 @@ p {
     }
 }
 
-/* ============================================
-   MAIN CONTENT
-   ============================================ */
+
 
 .main {
     min-height: calc(100vh - 80px);
@@ -213,12 +217,11 @@ p {
     }
 }
 
-/* ============================================
-   ABOUT SECTION (HERO)
-   ============================================ */
+
 
 .section-about {
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    background:
+        linear-gradient(135deg, rgba(251, 250, 247, 0.96) 0%, rgba(238, 243, 239, 0.88) 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -229,12 +232,9 @@ p {
 .section-about::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(212, 165, 116, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
+    inset: auto 0 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(185, 92, 67, 0.24), transparent);
     pointer-events: none;
 }
 
@@ -264,30 +264,39 @@ p {
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .btn {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border: none;
-    border-radius: var(--radius-md);
+    padding: 0.8rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: all 200ms var(--ease-out);
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+    width: fit-content;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-warm));
-    color: white;
-    box-shadow: var(--shadow-md);
+    background: var(--accent-primary);
+    color: #fff;
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
+    background: #9f4934;
+    border-color: #9f4934;
+    color: #fff;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-primary:active {
@@ -295,14 +304,15 @@ p {
 }
 
 .btn-secondary {
-    background-color: var(--bg-secondary);
+    background-color: transparent;
     color: var(--accent-primary);
-    border: 2px solid var(--accent-primary);
+    border-color: rgba(185, 92, 67, 0.42);
 }
 
 .btn-secondary:hover {
-    background-color: var(--accent-primary);
-    color: white;
+    background-color: rgba(185, 92, 67, 0.08);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
     transform: translateY(-2px);
 }
 
@@ -351,18 +361,11 @@ p {
     }
 
     .cta-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
+        align-items: flex-start;
     }
 }
 
-/* ============================================
-   SECTION TITLES
-   ============================================ */
+
 
 .section-title {
     color: var(--text-primary);
@@ -375,11 +378,12 @@ p {
     color: var(--text-secondary);
     margin-bottom: var(--spacing-2xl);
     font-size: 1.1rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* ============================================
-   PROJECTS SECTION
-   ============================================ */
+
 
 .section-projects {
     background-color: var(--bg-primary);
@@ -393,6 +397,7 @@ p {
 
 .project-card {
     background-color: white;
+    border: 1px solid rgba(222, 217, 207, 0.76);
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
@@ -422,7 +427,7 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
-/* Expanded modal state */
+
 .project-card.expanded {
     position: fixed;
     top: 50%;
@@ -449,7 +454,7 @@ p {
     }
 }
 
-/* Backdrop overlay */
+
 body.modal-open {
     overflow: hidden;
 }
@@ -531,7 +536,7 @@ body.modal-open {
     font-weight: 500;
 }
 
-/* Expand button */
+
 .expand-btn {
     margin-top: var(--spacing-md);
     padding: 8px 16px;
@@ -555,7 +560,7 @@ body.modal-open {
     transform: scale(0.98);
 }
 
-/* Project details modal */
+
 .project-details {
     display: none;
     padding: var(--spacing-lg);
@@ -601,7 +606,7 @@ body.modal-open {
 }
 
 .project-details-content li::before {
-    content: '•';
+    content: '-';
     position: absolute;
     left: 0;
     color: var(--accent-primary);
@@ -618,7 +623,7 @@ body.modal-open {
     font-style: italic;
 }
 
-/* Close button */
+
 .close-btn {
     margin-top: var(--spacing-lg);
     padding: 10px 20px;
@@ -643,9 +648,7 @@ body.modal-open {
     transform: scale(0.98);
 }
 
-/* ============================================
-   CERTIFICATIONS SECTION
-   ============================================ */
+
 
 .section-certifications {
     background-color: var(--bg-secondary);
@@ -659,6 +662,7 @@ body.modal-open {
 
 .cert-item {
     background-color: white;
+    border: 1px solid rgba(222, 217, 207, 0.76);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
@@ -701,9 +705,7 @@ body.modal-open {
     margin-top: var(--spacing-xs);
 }
 
-/* ============================================
-   EXPERIENCE SECTION
-   ============================================ */
+
 
 .section-experience {
     background-color: var(--bg-primary);
@@ -748,7 +750,7 @@ body.modal-open {
 }
 
 .experience-date {
-    color: var(--accent-secondary);
+    color: var(--accent-warm);
     font-weight: 600;
     font-size: 0.9rem;
     white-space: nowrap;
@@ -777,9 +779,7 @@ body.modal-open {
     }
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+
 
 .footer {
     background-color: var(--color-ink);
@@ -794,9 +794,7 @@ body.modal-open {
     font-size: 0.95rem;
 }
 
-/* ============================================
-   UTILITIES & RESPONSIVE
-   ============================================ */
+
 
 @media (max-width: 768px) {
     .section {
@@ -825,14 +823,14 @@ body.modal-open {
     }
 }
 
-/* Smooth scrolling for all sections */
+
 @media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
     }
 }
 
-/* Respect user's motion preferences */
+
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -841,9 +839,7 @@ body.modal-open {
     }
 }
 
-/* ============================================
-   CONTACT SECTION
-   ============================================ */
+
 
 .section-contact {
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
@@ -864,6 +860,7 @@ body.modal-open {
 
 .info-item {
     background-color: white;
+    border: 1px solid rgba(222, 217, 207, 0.76);
     padding: var(--spacing-lg);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
@@ -911,9 +908,10 @@ body.modal-open {
     color: var(--accent-secondary);
 }
 
-/* Contact form */
+
 .contact-form {
     background-color: white;
+    border: 1px solid rgba(222, 217, 207, 0.76);
     padding: var(--spacing-2xl);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
@@ -950,7 +948,7 @@ body.modal-open {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-primary);
-    box-shadow: 0 0 0 3px rgba(200, 90, 58, 0.1);
+    box-shadow: 0 0 0 3px rgba(185, 92, 67, 0.14);
 }
 
 .form-group textarea {
