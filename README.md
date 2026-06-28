@@ -13,9 +13,7 @@ The site is intentionally simple: HTML for the structure, CSS for the look and f
 
 ## How To View It
 
-Open `index.html` in a browser. That is enough for the site to run locally.
-
-If you prefer a local server, you can also serve the folder with any simple static server.
+Go To View Prok
 
 ## Notes For Future Me
 
