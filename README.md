@@ -13,7 +13,8 @@ The site is intentionally simple: HTML for the structure, CSS for the look and f
 
 ## How To View It
 
-Go To View Prok
+Go To View Project On Stardance.
+Hosted on Github Pages
 
 ## Notes For Future Me
 
