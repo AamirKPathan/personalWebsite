@@ -13,7 +13,7 @@ The site is intentionally lightweight. It uses HTML for the content, CSS for the
 
 ## How To View It
 
-View the project on Stardance, or open the GitHub Pages version once it is published.
+View the project on Stardance, or open the [GitHub Pages version](https://aamirkpathan.github.io/personalWebsite/).
 
 You can also open `index.html` directly in a browser to run the site locally.
 
