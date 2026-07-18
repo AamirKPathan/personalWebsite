@@ -119,6 +119,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--spacing-md);
     padding: var(--spacing-md) 0;
 }
 
@@ -150,8 +151,10 @@ p {
 
 .nav-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     list-style: none;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
 }
 
 .nav-link {
@@ -184,8 +187,14 @@ p {
 }
 
 @media (max-width: 768px) {
+    .header-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
     .nav-list {
-        gap: var(--spacing-md);
+        justify-content: flex-start;
+        gap: var(--spacing-sm);
         font-size: 0.9rem;
     }
 }
@@ -709,6 +718,14 @@ body.modal-open {
 
 .section-experience {
     background-color: var(--bg-primary);
+}
+
+.section-extracurriculars {
+    background-color: var(--bg-secondary);
+}
+
+.extracurricular-item {
+    border-left-color: var(--accent-secondary);
 }
 
 .experience-list {
