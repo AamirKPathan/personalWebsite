@@ -724,17 +724,11 @@ body.modal-open {
     background-color: var(--bg-secondary);
 }
 
-.section-competitions {
-    background-color: var(--bg-primary);
-}
 
 .extracurricular-item {
     border-left-color: var(--accent-secondary);
 }
 
-.competition-item {
-    border-left-color: var(--accent-warm);
-}
 
 .experience-list {
     max-width: 800px;
