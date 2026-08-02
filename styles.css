@@ -624,9 +624,32 @@ body.modal-open {
     width: 100%;
 }
 
+.project-actions {
+    display: grid;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.project-actions .expand-btn {
+    margin-top: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondary-action {
+    background-color: transparent;
+    border: 1px solid rgba(185, 92, 67, 0.42);
+    color: var(--accent-primary);
+}
+
 .expand-btn:hover {
     background-color: var(--accent-secondary);
     transform: translateY(-2px);
+}
+
+.secondary-action:hover {
+    border-color: var(--accent-secondary);
+    color: white;
 }
 
 .expand-btn:active {
