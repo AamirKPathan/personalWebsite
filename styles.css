@@ -509,22 +509,6 @@ body.modal-open {
     background: linear-gradient(180deg, rgba(47, 52, 50, 0) 35%, rgba(47, 52, 50, 0.16) 100%);
 }
 
-.project-image-bulkgpt {
-    display: grid;
-    place-items: center;
-    padding: var(--spacing-lg);
-    background:
-        linear-gradient(135deg, rgba(185, 92, 67, 0.92), rgba(95, 124, 111, 0.96)),
-        #2f3432;
-}
-
-.project-image-bulkgpt::after {
-    background:
-        linear-gradient(90deg, rgba(251, 250, 247, 0.12) 1px, transparent 1px),
-        linear-gradient(0deg, rgba(251, 250, 247, 0.12) 1px, transparent 1px);
-    background-size: 24px 24px;
-}
-
 .project-image-camo {
     display: grid;
     place-items: center;
@@ -564,54 +548,6 @@ body.modal-open {
 .camo-preview span:nth-child(3) { top: 24%; right: 5%; transform: rotate(52deg); }
 .camo-preview span:nth-child(4) { bottom: 4%; left: 58%; transform: rotate(-38deg); }
 .camo-preview span:nth-child(5) { bottom: 14%; right: 24%; transform: rotate(12deg); }
-
-.bulkgpt-preview {
-    position: relative;
-    z-index: 1;
-    width: min(100%, 260px);
-    border: 1px solid rgba(251, 250, 247, 0.42);
-    border-radius: var(--radius-md);
-    background: rgba(251, 250, 247, 0.94);
-    box-shadow: var(--shadow-md);
-    padding: var(--spacing-md);
-    color: var(--text-primary);
-}
-
-.bulkgpt-preview-bar {
-    display: flex;
-    gap: 6px;
-    margin-bottom: var(--spacing-sm);
-}
-
-.bulkgpt-preview-bar span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--color-clay);
-}
-
-.bulkgpt-preview-bar span:nth-child(2) {
-    background: var(--color-honey);
-}
-
-.bulkgpt-preview-bar span:nth-child(3) {
-    background: var(--color-sage);
-}
-
-.bulkgpt-preview p {
-    color: var(--text-primary);
-    font-family: var(--font-display);
-    font-size: 1.45rem;
-    font-weight: 700;
-    margin-bottom: 0.35rem;
-}
-
-.bulkgpt-preview code {
-    color: var(--accent-secondary);
-    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-    font-size: 0.82rem;
-    font-weight: 700;
-}
 
 .project-content {
     padding: var(--spacing-lg);
