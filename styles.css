@@ -509,46 +509,6 @@ body.modal-open {
     background: linear-gradient(180deg, rgba(47, 52, 50, 0) 35%, rgba(47, 52, 50, 0.16) 100%);
 }
 
-.project-image-camo {
-    display: grid;
-    place-items: center;
-    background: #89966d;
-}
-
-.project-image-camo::after {
-    background: linear-gradient(180deg, rgba(47, 52, 50, 0) 35%, rgba(47, 52, 50, 0.12) 100%);
-}
-
-.camo-preview {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background:
-        radial-gradient(ellipse at 18% 25%, #556b2f 0 12%, transparent 13%),
-        radial-gradient(ellipse at 72% 22%, #3f5328 0 16%, transparent 17%),
-        radial-gradient(ellipse at 48% 72%, #a2a87c 0 14%, transparent 15%),
-        radial-gradient(ellipse at 86% 78%, #667747 0 13%, transparent 14%),
-        #d0c99b;
-    background-size: 150px 120px, 180px 140px, 160px 130px, 190px 150px, auto;
-}
-
-.camo-preview span {
-    position: absolute;
-    display: block;
-    width: 18%;
-    height: 28%;
-    border-radius: 48% 52% 40% 60%;
-    background: rgba(63, 83, 40, 0.86);
-    transform: rotate(24deg);
-}
-
-.camo-preview span:nth-child(1) { top: 12%; left: 38%; }
-.camo-preview span:nth-child(2) { top: 52%; left: 8%; transform: rotate(-18deg); }
-.camo-preview span:nth-child(3) { top: 24%; right: 5%; transform: rotate(52deg); }
-.camo-preview span:nth-child(4) { bottom: 4%; left: 58%; transform: rotate(-38deg); }
-.camo-preview span:nth-child(5) { bottom: 14%; right: 24%; transform: rotate(12deg); }
-
 .project-content {
     padding: var(--spacing-lg);
 }
